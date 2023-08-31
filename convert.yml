@@ -1,0 +1,13 @@
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: yes
+
+  tasks:
+
+
+
+       - name: start convert video
+         shell: screen -d -m /bin/bash /home/ustudy/scripts/videoConvert.sh; sleep 1
+
+

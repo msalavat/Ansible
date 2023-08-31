@@ -1,0 +1,13 @@
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: yes
+
+  tasks:
+
+
+
+       - name: stop auto  video
+         shell: screen -d -m /bin/bash /home/ustudy/scripts/auto-sc2.sh; sleep 1
+
+

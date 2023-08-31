@@ -1,0 +1,11 @@
+
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: true
+  ignore_errors: true
+
+  tasks:
+    - name: create screen
+      shell: screen  -d -m /bin/bash /home/ustudy/upload-to-ftp/sc-upload-filtered.sh; sleep 1
+

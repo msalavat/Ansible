@@ -1,0 +1,4 @@
+ - name: Create File
+file:
+path: "/home/ustudy/test.php"
+state: touch

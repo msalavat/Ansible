@@ -1,0 +1,12 @@
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: yes
+
+  tasks:
+
+
+              - name: remove sem files
+                shell: rm /etc/nimble/*.sem
+
+

@@ -8,3 +8,4 @@
 
               - name: start video record
                 shell: /bin/bash /home/ustudy/sc-ui-app/start.sh 2>&1 &
+

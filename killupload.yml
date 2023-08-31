@@ -1,0 +1,12 @@
+
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: true
+  ignore_errors: true
+
+  tasks:
+    - name: close screen
+      shell: killall screen
+
+      

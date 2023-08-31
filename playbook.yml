@@ -1,0 +1,39 @@
+#-hosts: ustudy
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: yes
+
+  tasks:
+
+
+    
+  - name: ansible copy file from remote to local.
+    fetch:
+     src: /etc/wireguard/wg0.conf
+     dest: /temp/
+
+#- fetch: src=/remote/{{ item }} dest=/local/ with_items: "{{ files_to_copy.stdout_lines }}"
+
+
+
+
+#  tasks:
+#  - name: Ansible copy file to remote server
+ #   copy:
+  #    src: /etc/wireguard/wg0.conf
+   #   dest: /home/ 
+#task:
+# name: find files to copy
+ # find: 
+  #  paths: "/etc/wireguard"
+   # recurse: no 
+    #patterns: "wg0.conf"
+  #register: files_to_copy
+
+#- name: Copy files
+#  fetch: 
+#    src: "{{ etc/wireguard }}"
+#    dest: /tmp/foo_files/
+#    flat: yes
+#  with_items: "{{ files_to_copy.files }}"

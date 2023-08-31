@@ -1,0 +1,13 @@
+- hosts: ustudy
+  gather_facts: no
+  become: yes
+  ignore_unreachable: yes
+
+  tasks:
+
+             - name: remove autostart cronjob
+               cron:
+                 name: auto-sc
+                 state: absent
+
+
