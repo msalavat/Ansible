@@ -5,10 +5,8 @@
   ignore_unreachable: yes
 
   tasks:
-
-              - name: create cron job
-                cron:
-                  name: auto-sc
-                  minute: "*/5"
-                  job: /bin/bash /home/ustudy/scripts/auto-sc.sh
- 
+    - name: create cron job
+      cron:
+        name: auto-sc
+        minute: "*/5"
+        job: /bin/bash /home/ustudy/scripts/auto-sc.sh
