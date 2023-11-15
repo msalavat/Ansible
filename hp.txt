@@ -3,6 +3,8 @@
   remote_user: ustudy
   become: true
   become_method: sudo
+  sudo: true
+  sudo_user: root
   ignore_unreachable: yes
   tasks:
     - name: create cron job
