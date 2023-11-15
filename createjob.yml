@@ -1,8 +1,10 @@
-- hosts: ustudy
+- hosts: all
   gather_facts: no
-  become: yes
+  remote_user: ustudy
+  become: true
+  become_method: sudo
   ignore_unreachable: yes
-
+  
   tasks:
 
               - name: create cron job
