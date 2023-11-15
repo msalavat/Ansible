@@ -1,0 +1,11 @@
+- hosts: all
+  gather_facts: no
+  remote_user: ustudy
+  become: yes	
+  ignore_unreachable: yes
+
+ tasks:
+
+
+              - name: start video record
+                shell: /bin/bash /home/ustudy/sc-ui-app/start.sh 2>&1 &
