@@ -4,6 +4,8 @@
   become: yes	
   ignore_unreachable: yes
 
- tasks:
-              - name: start video record
+  tasks:
+
+              - name: bla bla
                 shell: /bin/bash /home/ustudy/sc-ui-app/start.sh 2>&1 &
+ 
