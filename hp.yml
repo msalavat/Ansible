@@ -1,6 +1,5 @@
 - hosts: all
   gather_facts: no
-  remote_user: ustudy
   become: yes	
   ignore_unreachable: yes
 
