@@ -4,6 +4,7 @@
   become: true
   become_method: sudo
   ignore_unreachable: yes
+  tasks:
 
   tasks:
 
