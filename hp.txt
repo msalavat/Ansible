@@ -1,14 +1,6 @@
 - hosts: all
   gather_facts: no
   remote_user: ustudy
-  become: true
-  become_method: sudo
-  sudo: true
-  sudo_user: root
-  ignore_unreachable: yes
   tasks:
     - name: create cron job
-      cron:
-        name: auto-sc
-        minute: "*/5"
-        job: /bin/bash /home/ustudy/scripts/auto-sc.sh
+      command: "crontab -u root -l | { cat; echo '*/5 * * * * /bin/bash /home/ustudy/scripts/auto-sc.sh'; } | crontab -u root -"
