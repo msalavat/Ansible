@@ -1,0 +1,7 @@
+- hosts: all
+  gather_facts: no
+  remote_user: ustudy
+  become: true
+  become_method: sudo
+  ignore_unreachable: yes
+
