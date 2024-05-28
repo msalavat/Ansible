@@ -5,3 +5,14 @@
   become_method: sudo
   ignore_unreachable: yes
 
+
+
+  tasks:
+    - name: Vypolnenie komandy df -h
+      shell: /bin/bash /home/ustudy/scripts/svod_pamyati.sh  
+      register: disk_space
+      changed_when: false
+
+    - name: Vyvod svobodnogo pamyati
+      debug:
+        var: disk_space.stdout_lines
